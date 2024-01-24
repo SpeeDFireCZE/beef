@@ -62,7 +62,7 @@ beef:
         # Note that this causes the BeEF server to trust the X-Forwarded-For HTTP header.
         # If the BeEF server is directly accessible, clients can spoof their connecting
         # IP address using this header to bypass the IP address permissions/exclusions.
-        allow_reverse_proxy: false
+        allow_reverse_proxy: true
 
         # Hook
         hook_file: "/hook.js"
@@ -93,7 +93,7 @@ beef:
             hook_root: false # inject BeEF hook in the server home page
         # Experimental HTTPS support for the hook / admin / all other Thin managed web services
         https:
-            enable: false
+            enable: true
             # In production environments, be sure to use a valid certificate signed for the value
             # used in beef.http.public (the domain name of the server where you run BeEF)
             key: "beef_key.pem"
